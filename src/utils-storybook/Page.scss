@@ -1,0 +1,26 @@
+@import "../scss/utils/index";
+
+.sb-page {
+    padding: 20px;
+    font-family: $family-sans-serif-1;
+    min-height: 300px;
+
+    &.inverted {
+        background-color: $color-neutral-900;
+
+        .sb-header {
+            .sb-title {
+                color: $color-neutral-0;
+            }
+            .sb-info {
+                color: $color-neutral-0;
+            }
+        }
+    }
+
+    .sb-header {
+        .sb-title {
+            color: $color-neutral-800;
+        }
+    }
+}

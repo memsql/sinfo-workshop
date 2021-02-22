@@ -1,0 +1,31 @@
+// old cards styling
+.cards {
+    &.company {
+        margin-top: 50px;
+    }
+    @include outer-container;
+    margin-bottom: 50px;
+    margin-top:0px;
+    .card {
+        margin: 0 2em 2.2em 2em;
+        a {
+            text-decoration: none;
+            .card-header {
+                padding: .75em 1.2em;
+                color: #707070;
+                font-weight: 500;
+                font-size: 14px;
+                text-transform: uppercase;
+                border-bottom: 0px;
+            }
+            .card-copy {
+                p {
+                    color: #404040;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 1.6em;
+                }
+            }
+        }
+    }
+}
