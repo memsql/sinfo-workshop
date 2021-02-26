@@ -14,16 +14,11 @@ export const BUTTON_TYPES = [
 ];
 
 const Button = ({ children, type, size, disabled, inverted, onClick }) => {
-    // const shouldDisable = disabled || !onClick;
-    const shouldDisable = disabled;
-
-    const classes = classNames("button-component", type, `size-${size}`, {
-        disabled: shouldDisable,
+    const classes = classNames("button-component", type, size, {
+        disabled,
         inverted,
     });
 
-
-     /** A handler to change the input value */
     const handleClick = e => {
         if (disabled) {
             e.stopPropagation();
@@ -37,7 +32,7 @@ const Button = ({ children, type, size, disabled, inverted, onClick }) => {
         <button
             className={classes}
             onClick={handleClick}
-            disabled={shouldDisable}
+            disabled={disabled}
         >
             {children}
         </button>
@@ -49,15 +44,13 @@ Button.defaultProps = {
     size: "medium",
 };
 
-export const buttonPropTypes = {
+Button.propTypes = {
     type: PropTypes.oneOf(BUTTON_TYPES),
     size: PropTypes.oneOf(BUTTON_SIZES),
     children: PropTypes.node.isRequired,
     onClick: PropTypes.func,
     disabled: PropTypes.bool,
     inverted: PropTypes.bool,
-};
-
-Button.propTypes = buttonPropTypes;
+};;
 
 export default Button;

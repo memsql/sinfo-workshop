@@ -68,8 +68,8 @@ const Input = ({
                 setIsSuccess(true);
             }
 
-            if (onChange) {
-                onChange(e, value);
+            if (onBlur) {
+                onBlur(e, value);
             }
 
         }
@@ -106,7 +106,7 @@ Input.defaultProps = {
     type: "text",
 };
 
-export const inputPropTypes = {
+Input.propTypes = {
     type: PropTypes.oneOf(TEXT_TYPES),
     name: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
@@ -115,8 +115,7 @@ export const inputPropTypes = {
     success: PropTypes.bool,
     error: PropTypes.bool,
     onClick: PropTypes.func,
+    onBlur: PropTypes.func,
 };
-
-Input.propTypes = inputPropTypes;
 
 export default Input;

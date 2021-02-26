@@ -12,6 +12,10 @@ const Template = (args) => (
     );
 
 export const Primary = Template.bind();
+Primary.parameters = {
+    jest: ['Button.test.js'],
+};
+
 
 export const Secondary = Template.bind();
 Secondary.args = {
@@ -28,23 +32,11 @@ const buttonStory = {
     component: Button,
     args: {
         children: "I am a button",
-        // onClick: () => { alert("You clicked me.") },
-        // onClick: null,
+        onClick: () => { alert("You clicked me.") },
     },
     argTypes: {
-        // type: {
-        //     control: {
-        //         type: 'select',
-        //         options: BUTTON_TYPES,
-        //     }
-        // },
         children: { control: 'text' },
     },
 };
 
 export default buttonStory;
-
-export const defaultView = () => <div>Jest results in storybook</div>;
-defaultView.parameters = {
-    jest: ['Button.test.js'],
-};

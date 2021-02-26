@@ -1,8 +1,6 @@
 .button-component {
     display: inline-block;
-    padding: 0.8em 1.2em;
     font-family: "Lato", sans-serif;
-    font-size: 18px;
     font-weight: 700;
     line-height: 1;
     text-align: center;
@@ -12,6 +10,9 @@
     transition: 0.15s ease-in-out;
     cursor: pointer;
     user-select: none;
+
+    font-size: 18px;
+    padding: 0.8em 1.2em;
 }
 
 .button-component:not(.disabled):hover {
@@ -20,10 +21,9 @@
     filter: brightness(1.1);
 }
 
-.button-component:active {
+.button-component:not(.disabled):active {
     box-shadow: none;
     transform: none;
-    opacity: 1;
     filter: brightness(0.95);
 }
 
@@ -34,12 +34,12 @@
 
 // SIZES
 // Large
-.button-component.size-large {
+.button-component.large {
     font-size: 20px;
 }
 
 // Small
-.button-component.size-small {
+.button-component.small {
     font-size: 16px;
 }
 

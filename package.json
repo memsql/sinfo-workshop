@@ -3,9 +3,6 @@
     "version": "0.1.0",
     "private": true,
     "dependencies": {
-        "@testing-library/jest-dom": "^5.11.9",
-        "@testing-library/react": "^11.2.5",
-        "@testing-library/user-event": "^12.6.3",
         "classnames": "^2.2.6",
         "node-sass": "^5.0.0",
         "react": "^17.0.1",
@@ -43,12 +40,34 @@
         ]
     },
     "devDependencies": {
+        "@babel/core": "^7.12.17",
+        "@babel/preset-env": "^7.12.17",
+        "@babel/preset-react": "^7.12.13",
         "@storybook/addon-actions": "^6.1.17",
         "@storybook/addon-essentials": "^6.1.17",
         "@storybook/addon-jest": "^6.1.18",
         "@storybook/addon-links": "^6.1.17",
         "@storybook/node-logger": "^6.1.17",
         "@storybook/preset-create-react-app": "^3.1.5",
-        "@storybook/react": "^6.1.17"
+        "@storybook/react": "^6.1.17",
+        "@testing-library/dom": "^7.29.6",
+        "@testing-library/jest-dom": "^5.11.9",
+        "@testing-library/react": "^11.2.5",
+        "@testing-library/user-event": "^12.7.2",
+        "babel-jest": "^26.6.3",
+        "react-test-renderer": "^17.0.1"
+    },
+    "jest": {
+        "transform": {
+            "^.+\\.js$": "babel-jest"
+        },
+        "setupFilesAfterEnv": [
+            "@testing-library/jest-dom/extend-expect",
+            "./src/setupTests.js"
+        ],
+        "moduleNameMapper": {
+            "\\.(css|less|sass|scss)$": "<rootDir>/__mocks__/styleMock.js",
+            "\\.(gif|ttf|eot|svg)$": "<rootDir>/__mocks__/fileMock.js"
+        }
     }
 }
