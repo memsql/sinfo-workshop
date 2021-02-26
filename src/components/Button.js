@@ -1,8 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
-
-import "./Button.scss";
 
 export const BUTTON_SIZES = ["small", "medium", "large"];
 
@@ -13,11 +10,12 @@ export const BUTTON_TYPES = [
     "secondary-alt",
 ];
 
-const Button = ({ children, type, size, disabled, inverted, onClick }) => {
-    const classes = classNames("button-component", type, size, {
-        disabled,
-        inverted,
-    });
+const Button = ({
+    //🎯 There is work to be done here!
+    children,
+    disabled,
+    onClick,
+}) => {
 
     const handleClick = e => {
         if (disabled) {
@@ -29,28 +27,25 @@ const Button = ({ children, type, size, disabled, inverted, onClick }) => {
     };
 
     return (
-        <button
-            className={classes}
-            onClick={handleClick}
-            disabled={disabled}
-        >
-            {children}
-        </button>
+        //🚩 Start here!
+        //   Replace the HTML below
+        <p>{children}</p>
     );
 }
 
 Button.defaultProps = {
-    type: "primary",
-    size: "medium",
+    //🎯 There is work to be done here!
+    //📙 Learn more: https://reactjs.org/docs/typechecking-with-proptypes.html#default-prop-values
+    disabled: false,
 };
 
 Button.propTypes = {
-    type: PropTypes.oneOf(BUTTON_TYPES),
-    size: PropTypes.oneOf(BUTTON_SIZES),
-    children: PropTypes.node.isRequired,
-    onClick: PropTypes.func,
+    //🎯 There is work to be done here!
+    //📙 Learn more: https://reactjs.org/docs/typechecking-with-proptypes.html
     disabled: PropTypes.bool,
-    inverted: PropTypes.bool,
 };;
 
 export default Button;
+
+
+//📙 Learn about React Components and Props: https://reactjs.org/docs/components-and-props.html
