@@ -7,10 +7,10 @@ import "./Button.scss";
 export const BUTTON_SIZES = ["small", "medium", "large"];
 
 export const BUTTON_TYPES = [
-    "primary",
-    "primary-alt",
-    "secondary",
-    "secondary-alt",
+    "brand-primary",
+    "brand-secondary",
+    "alt-primary",
+    "alt-secondary",
 ];
 
 const Button = ({
@@ -24,7 +24,10 @@ const Button = ({
 
     //🚩 Start here!
     //📙 Learn more: https://www.npmjs.com/package/classnames
-    // const classes = classNames(...);
+    const classes = classNames("button-component", type, size, {
+        disabled,
+        inverted,
+    });
 
     const handleClick = e => {
         if (disabled) {
@@ -38,7 +41,7 @@ const Button = ({
     return (
         <button
             //💡 Tip: Edit the className attribute
-            className="button-component"
+            className={classes}
             onClick={handleClick}
             disabled={disabled}
         >
@@ -49,7 +52,7 @@ const Button = ({
 
 //📙 Learn more: https://reactjs.org/docs/typechecking-with-proptypes.html#default-prop-values
 Button.defaultProps = {
-    type: "primary",
+    type: "brand-primary",
     size: "medium",
 };
 
