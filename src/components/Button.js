@@ -11,10 +11,12 @@ export const BUTTON_TYPES = [
 ];
 
 const Button = ({
-    //🎯 There is work to be done here!
     children,
+    type,
+    size,
+    inverted,
     disabled,
-    onClick,
+    onClick
 }) => {
 
     const handleClick = e => {
@@ -27,22 +29,29 @@ const Button = ({
     };
 
     return (
-        //🚩 Start here!
-        //   Replace the HTML below
-        <p>{children}</p>
+        <button
+            onClick={handleClick}
+            disabled={disabled}
+        >
+            {children}
+        </button>
     );
 }
 
 Button.defaultProps = {
-    //🎯 There is work to be done here!
     //📙 Learn more: https://reactjs.org/docs/typechecking-with-proptypes.html#default-prop-values
-    disabled: false,
+    type: "primary",
+    size: "medium",
 };
 
 Button.propTypes = {
-    //🎯 There is work to be done here!
     //📙 Learn more: https://reactjs.org/docs/typechecking-with-proptypes.html
+    type: PropTypes.oneOf(BUTTON_TYPES),
+    size: PropTypes.oneOf(BUTTON_SIZES),
+    children: PropTypes.node.isRequired,
+    inverted: PropTypes.bool,
     disabled: PropTypes.bool,
+    onClick: PropTypes.func,
 };;
 
 export default Button;
