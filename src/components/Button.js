@@ -1,5 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
+
+import "./Button.scss";
 
 export const BUTTON_SIZES = ["small", "medium", "large"];
 
@@ -19,6 +22,10 @@ const Button = ({
     onClick
 }) => {
 
+    //🚩 Start here!
+    //📙 Learn more: https://www.npmjs.com/package/classnames
+    // const classes = classNames(...);
+
     const handleClick = e => {
         if (disabled) {
             e.stopPropagation();
@@ -30,6 +37,8 @@ const Button = ({
 
     return (
         <button
+            //💡 Tip: Edit the className attribute
+            className="button-component"
             onClick={handleClick}
             disabled={disabled}
         >
@@ -38,14 +47,14 @@ const Button = ({
     );
 }
 
+//📙 Learn more: https://reactjs.org/docs/typechecking-with-proptypes.html#default-prop-values
 Button.defaultProps = {
-    //📙 Learn more: https://reactjs.org/docs/typechecking-with-proptypes.html#default-prop-values
     type: "primary",
     size: "medium",
 };
 
+//📙 Learn more: https://reactjs.org/docs/typechecking-with-proptypes.html
 Button.propTypes = {
-    //📙 Learn more: https://reactjs.org/docs/typechecking-with-proptypes.html
     type: PropTypes.oneOf(BUTTON_TYPES),
     size: PropTypes.oneOf(BUTTON_SIZES),
     children: PropTypes.node.isRequired,
@@ -55,6 +64,5 @@ Button.propTypes = {
 };;
 
 export default Button;
-
 
 //📙 Learn about React Components and Props: https://reactjs.org/docs/components-and-props.html

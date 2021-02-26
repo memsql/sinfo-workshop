@@ -1,0 +1,100 @@
+.button-component {
+    display: inline-block;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    margin: 6px;
+    border-radius: 4px;
+    transition: 0.15s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+
+    font-size: 18px;
+    padding: 0.8em 1.2em;
+}
+
+.button-component:not(.disabled):hover {
+    transform: translateY(-1px);
+    filter: brightness(1.1);
+    //🎯 There is work to be done here!
+}
+
+.button-component:not(.disabled):active {
+    box-shadow: none;
+    transform: none;
+    filter: brightness(0.95);
+}
+
+.button-component.disabled {
+    cursor: default;
+    //🎯 There is work to be done here!
+}
+
+// SIZES
+// Large
+.button-component.large {
+    //🎯 There is work to be done here!
+}
+
+// Small
+.button-component.small {
+    //🎯 There is work to be done here!
+}
+
+// TYPES
+// Primary
+.button-component.primary {
+    color: #ffffff;
+    background: linear-gradient(110deg, #ff7bff 0%, #aa00ff 50%, #311b92 100%);
+    border: none;
+}
+.button-component.primary.inverted {
+    //🎯 There is work to be done here!
+}
+
+// Secondary
+.button-component.secondary {
+    color: #8800cc;
+    background: transparent;
+    border: 2px solid #8800cc;
+}
+.button-component.secondary.inverted {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.button-component.secondary.inverted:not(.disabled):hover,
+.button-component.secondary.inverted:not(.disabled):focus {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.button-component.primary:focus,
+.button-component.secondary:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 4px #ecc7ff;
+}
+
+.button-component.primary.inverted:focus,
+.button-component.secondary.inverted:focus {
+    box-shadow: 0px 0px 0px 4px #aa00ff;
+}
+
+// Primary Alternative
+.button-component.primary-alt {
+    color: #ffffff;
+    background: linear-gradient(276deg, #0081d7 11%, #00e0f7 131%);
+    border: none;
+}
+.button-component.primary-alt.inverted {
+    color: #0081d7;
+    background: #ffffff;
+}
+
+// Secondary Alternative
+.button-component.secondary-alt {
+    color: #4c4a57;
+    background: #ffffff;
+    border: 1px solid #c2c1c7;
+}
