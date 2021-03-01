@@ -36,12 +36,12 @@
 /* ---------------- */
 /*      SIZES       */
 /* ---------------- */
-// Small
+/* Small */
 .button-component.small {
     font-size: 16px;
 }
 
-// Large
+/* Large */
 .button-component.large {
     font-size: 20px;
 }
@@ -49,7 +49,7 @@
 /* ---------------- */
 /*      TYPES       */
 /* ---------------- */
-// BRAND PRIMARY
+/* BRAND PRIMARY */
 .button-component.brand-primary {
     color: #ffffff;
     background: linear-gradient(110deg, #ff7bff 0%, #aa00ff 50%, #311b92 100%);
@@ -64,7 +64,7 @@
 .button-component.brand-primary:focus {
     box-shadow: 0px 0px 0px 4px #ecc7ff;
 }
-// BRAND PRIMARY - Inverted
+/* BRAND PRIMARY - Inverted */
 .button-component.brand-primary.inverted {
     color: #8800cc;
     background: #ffffff;
@@ -73,7 +73,7 @@
     box-shadow: 0px 0px 0px 4px #aa00ff;
 }
 
-// BRAND SECONDARY
+/* BRAND SECONDARY */
 .button-component.brand-secondary {
     color: #8800cc;
     background: transparent;
@@ -85,7 +85,7 @@
 .button-component.brand-secondary:focus {
     box-shadow: 0px 0px 0px 4px #ecc7ff;
 }
-// BRAND SECONDARY - Inverted
+/* BRAND SECONDARY - Inverted */
 .button-component.brand-secondary.inverted {
     color: #ffffff;
     border-color: #ffffff;
@@ -97,7 +97,7 @@
     box-shadow: 0px 0px 0px 4px #aa00ff;
 }
 
-// ALTERNATIVE PRIMARY
+/* ALTERNATIVE PRIMARY */
 .button-component.alt-primary {
     color: #ffffff;
     background: linear-gradient(276deg, #0081d7 11%, #00e0f7 131%);
@@ -112,13 +112,13 @@
 .button-component.alt-primary:focus {
     box-shadow: 0px 0px 0px 4px #0081d7;
 }
-// ALTERNATIVE PRIMARY - Inverted
+/* ALTERNATIVE PRIMARY - Inverted */
 .button-component.alt-primary.inverted {
     color: #0081d7;
     background: #ffffff;
 }
 
-// ALTERNATIVE SECONDARY
+/* ALTERNATIVE SECONDARY */
 .button-component.alt-secondary {
     color: #4c4a57;
     background: #ffffff;
