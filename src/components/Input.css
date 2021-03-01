@@ -1,0 +1,73 @@
+.input-component .input-label {
+    display: block;
+    font-size: 16px;
+    font-weight: 900;
+    color: #777582;
+    margin: 0 0 0.5em 0;
+}
+
+.input-component .input-wrapper .input {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0.5em;
+
+    background: #f3f3f5;
+    color: #4c4a57;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    outline: 0;
+
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+
+    transition: background-color 0.15s ease-in-out;
+}
+.input-component .input-wrapper .input:hover {
+    background: #e6e5ea;
+}
+.input-component .input-wrapper .input:focus {
+    appearance: none;
+    background: #ffffff;
+    border: 2px solid #c550ff;
+}
+
+.input-component .input-wrapper .input::placeholder {
+    color: #c2c1c7;
+}
+.input-component .input-wrapper .input:active::placeholder {
+    color: transparent;
+}
+
+/* STATUS */
+/* Error */
+.input-component.error .input-label {
+    color: #c41337;
+}
+.input-component.error .input-wrapper .input,
+.input-component.error .input-wrapper .input:focus {
+    border-color: #c41337;
+}
+.input-component.error .input-wrapper .error-message {
+    margin-top: 5px;
+    color: #c41337;
+}
+
+/* Success */
+.input-component.success .input-label {
+    color: #00873f;
+}
+.input-component.success .input-wrapper .input,
+.input-component.success .input-wrapper .input:focus {
+    border-color: #00873f;
+}
+
+/* Disabled */
+.input-component.disabled {
+    opacity: 0.6;
+}
+.input-component.disabled .input-wrapper .input:hover {
+    background: #f3f3f5;
+    cursor: not-allowed;
+}

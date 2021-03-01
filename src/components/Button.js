@@ -64,7 +64,7 @@ Button.propTypes = {
     inverted: PropTypes.bool,
     disabled: PropTypes.bool,
     onClick: PropTypes.func,
-};;
+};
 
 export default Button;
 
