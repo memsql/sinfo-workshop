@@ -41,6 +41,9 @@ const inputStory = {
             </Page>
         ),
     ],
+    parameters: {
+        jest: ['Input.test.js'],
+    },
 };
 
 export default inputStory;
