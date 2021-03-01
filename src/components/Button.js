@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const BUTTON_SIZES = ["small", "medium", "large"];
+const BUTTON_SIZES = ["small", "medium", "large"];
 
-export const BUTTON_TYPES = [
-    "primary",
-    "primary-alt",
-    "secondary",
-    "secondary-alt",
+const BUTTON_TYPES = [
+    "brand-primary",
+    "brand-secondary",
+    "alt-primary",
+    "alt-secondary",
 ];
 
 const Button = ({
@@ -40,7 +40,7 @@ const Button = ({
 
 Button.defaultProps = {
     //📙 Learn more: https://reactjs.org/docs/typechecking-with-proptypes.html#default-prop-values
-    type: "primary",
+    type: "brand-primary",
     size: "medium",
 };
 
