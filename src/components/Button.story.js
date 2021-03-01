@@ -5,44 +5,30 @@ import Page from '../utils-storybook/Page';
 
 const Template = (args) => (
     <Page title="Button" inverted={args.inverted}>
-        <Button {...args}>
-            {args.children}
+        {/* 🚩 Start here!
+            args need to be passed to the component */}
+        <Button>
+            I am a button
         </Button>
     </Page>
-    );
+);
 
 export const BrandPrimary = Template.bind();
 
-export const BrandSecondary = Template.bind();
-BrandSecondary.args = {
-    type: "brand-secondary",
-};
-
-export const AltPrimary = Template.bind();
-AltPrimary.args = {
-    type: "alt-primary",
-};
-
-export const AltSecondary = Template.bind();
-AltSecondary.args = {
-    type: "alt-secondary",
-};
-
-export const Inverted = Template.bind();
-Inverted.args = {
-    inverted: true,
-};
+//🎯 Add new stories with different args
 
 const buttonStory = {
     title: "Components/Button",
     component: Button,
     args: {
-        children: "I am a button",
+        //🎯 There is work to be done here!
+        // children: ...,
         onClick: () => { alert("You clicked me.") },
     },
-    argTypes: {
-        children: { control: 'text' },
-    },
+    //🎯 Add an argType for "children"
+    //📙 Learn more: https://storybook.js.org/docs/react/api/argtypes
 };
 
 export default buttonStory;
+
+//📙 Storybook React Docs: https://storybook.js.org/docs/react/get-started/introduction
