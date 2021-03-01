@@ -2,11 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-import "./Button.scss";
+import "./Button.css";
 
-export const BUTTON_SIZES = ["small", "medium", "large"];
+const BUTTON_SIZES = ["small", "medium", "large"];
 
-export const BUTTON_TYPES = [
+const BUTTON_TYPES = [
     "brand-primary",
     "brand-secondary",
     "alt-primary",
@@ -64,7 +64,7 @@ Button.propTypes = {
     inverted: PropTypes.bool,
     disabled: PropTypes.bool,
     onClick: PropTypes.func,
-};;
+};
 
 export default Button;
 
