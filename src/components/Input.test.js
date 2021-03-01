@@ -13,17 +13,7 @@ describe("fn isValidInput()", () => {
         expect(isValidInput("rferro.singlestore.com", "email")).toEqual("Email is invalid.");
     });
 
-    it("returns true for singlestore.com", () => {
-        expect(isValidInput("singlestore.com", "url")).toEqual(true);
-    });
-
-    it("returns true for https://singlestore.com", () => {
-        expect(isValidInput("https://singlestore.com", "url")).toEqual(true);
-    });
-
-    it("returns true for rferro.singlestore.com", () => {
-        expect(isValidInput("rferro.singlestore.com", "url")).toEqual(true);
-    });
+    //🎯 Add tests for valid urls
 
     it("returns 'Link is invalid.' for rferro", () => {
         expect(isValidInput("rferro", "url")).toEqual("Link is invalid.");

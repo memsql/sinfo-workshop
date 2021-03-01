@@ -8,17 +8,13 @@ describe('renders the button in the primary state:', () => {
     render( <BrandPrimary {...buttonStory.args} />);
     const button = screen.getByRole('button');
 
-    it('button has class "brand-primary"', () => {
-        expect(button).toHaveClass("brand-primary");
+    //🎯 Fix broken test
+    it('button has class "primary"', () => {
+        expect(button).toHaveClass("primary");
     });
 
-    it('button is enabled', () => {
-        expect(button).toBeEnabled();
-    });
-
-    it('button content', () => {
-        expect(button).toHaveTextContent("I am a button");
-    });
+    //🎯 Add more tests
+    //   e.g. Is the button enabled? Is the content correct?
 });
 
 //📙 Testing Library jest-dom: https://github.com/testing-library/jest-dom
