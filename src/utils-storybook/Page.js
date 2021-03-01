@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-import "./Page.scss";
+import "./Page.css";
 
 export const Page = ({
     title,

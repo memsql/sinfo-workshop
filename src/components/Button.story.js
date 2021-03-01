@@ -12,6 +12,9 @@ const Template = (args) => (
     );
 
 export const BrandPrimary = Template.bind();
+BrandPrimary.parameters = {
+    jest: ['Button.test.js'],
+};
 
 export const BrandSecondary = Template.bind();
 BrandSecondary.args = {
