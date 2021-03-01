@@ -7,10 +7,10 @@ import "./Button.scss";
 export const BUTTON_SIZES = ["small", "medium", "large"];
 
 export const BUTTON_TYPES = [
-    "primary",
-    "primary-alt",
-    "secondary",
-    "secondary-alt",
+    "brand-primary",
+    "brand-secondary",
+    "alt-primary",
+    "alt-secondary",
 ];
 
 const Button = ({
@@ -49,7 +49,7 @@ const Button = ({
 
 //📙 Learn more: https://reactjs.org/docs/typechecking-with-proptypes.html#default-prop-values
 Button.defaultProps = {
-    type: "primary",
+    type: "brand-primary",
     size: "medium",
 };
 

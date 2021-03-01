@@ -17,14 +17,15 @@
 
 .button-component:not(.disabled):hover {
     transform: translateY(-1px);
-    filter: brightness(1.1);
     //🎯 There is work to be done here!
 }
-
-.button-component:not(.disabled):active {
+.button-component:active {
     box-shadow: none;
     transform: none;
-    filter: brightness(0.95);
+    filter: brightness(0.97);
+}
+.button-component:focus {
+    outline: none;
 }
 
 .button-component.disabled {
@@ -32,69 +33,96 @@
     //🎯 There is work to be done here!
 }
 
-// SIZES
-// Large
-.button-component.large {
-    //🎯 There is work to be done here!
-}
-
+/* ---------------- */
+/*      SIZES       */
+/* ---------------- */
 // Small
 .button-component.small {
     //🎯 There is work to be done here!
 }
 
-// TYPES
-// Primary
-.button-component.primary {
+// Large
+.button-component.large {
+    //🎯 There is work to be done here!
+}
+
+/* ---------------- */
+/*      TYPES       */
+/* ---------------- */
+// BRAND PRIMARY
+.button-component.brand-primary {
     color: #ffffff;
     background: linear-gradient(110deg, #ff7bff 0%, #aa00ff 50%, #311b92 100%);
     border: none;
 }
-.button-component.primary.inverted {
-    //🎯 There is work to be done here!
+.button-component.brand-primary:not(.disabled):hover {
+    filter: brightness(1.1);
 }
-
-// Secondary
-.button-component.secondary {
-    color: #8800cc;
-    background: transparent;
-    border: 2px solid #8800cc;
+.button-component.brand-primary:not(.disabled):active {
+    filter: brightness(0.95);
 }
-.button-component.secondary.inverted {
-    color: #ffffff;
-    border-color: #ffffff;
-}
-
-.button-component.secondary.inverted:not(.disabled):hover,
-.button-component.secondary.inverted:not(.disabled):focus {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.button-component.primary:focus,
-.button-component.secondary:focus {
-    outline: none;
+.button-component.brand-primary:focus {
     box-shadow: 0px 0px 0px 4px #ecc7ff;
 }
-
-.button-component.primary.inverted:focus,
-.button-component.secondary.inverted:focus {
+// BRAND PRIMARY - Inverted
+.button-component.brand-primary.inverted {
+    //🎯 There is work to be done here!
+}
+.button-component.brand-primary.inverted:focus:not(:active) {
     box-shadow: 0px 0px 0px 4px #aa00ff;
 }
 
-// Primary Alternative
-.button-component.primary-alt {
-    color: #ffffff;
-    background: linear-gradient(276deg, #0081d7 11%, #00e0f7 131%);
-    border: none;
+// BRAND SECONDARY
+.button-component.brand-secondary {
+    //🎯 There is work to be done here!
 }
-.button-component.primary-alt.inverted {
+.button-component.brand-secondary:not(.disabled):hover {
+    background: #f9edff;
+}
+.button-component.brand-secondary:focus {
+    box-shadow: 0px 0px 0px 4px #ecc7ff;
+}
+// BRAND SECONDARY - Inverted
+.button-component.brand-secondary.inverted {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+.button-component.brand-secondary.inverted:not(.disabled):hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.button-component.brand-secondary.inverted:focus {
+    box-shadow: 0px 0px 0px 4px #aa00ff;
+}
+
+// ALTERNATIVE PRIMARY
+.button-component.alt-primary {
+    border: none;
+    //🎯 There is work to be done here!
+}
+.button-component.alt-primary:not(.disabled):hover {
+    filter: brightness(1.1);
+}
+.button-component.alt-primary:not(.disabled):active {
+    filter: brightness(0.95);
+}
+.button-component.alt-primary:focus {
+    box-shadow: 0px 0px 0px 4px #0081d7;
+}
+// ALTERNATIVE PRIMARY - Inverted
+.button-component.alt-primary.inverted {
     color: #0081d7;
     background: #ffffff;
 }
 
-// Secondary Alternative
-.button-component.secondary-alt {
+// ALTERNATIVE SECONDARY
+.button-component.alt-secondary {
     color: #4c4a57;
     background: #ffffff;
     border: 1px solid #c2c1c7;
+}
+.button-component.alt-secondary:focus {
+    box-shadow: 0px 0px 0px 4px #e6e5ea;
+}
+.button-component.alt-secondary.inverted:focus {
+    box-shadow: 0px 0px 0px 4px #777582;
 }
