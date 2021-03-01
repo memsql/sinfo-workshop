@@ -22,7 +22,6 @@ const Button = ({
     onClick
 }) => {
 
-    //🚩 Start here!
     //📙 Learn more: https://www.npmjs.com/package/classnames
     const classes = classNames("button-component", type, size, {
         disabled,
