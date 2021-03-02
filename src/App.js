@@ -8,7 +8,7 @@ function App() {
     return (
         <div className="App">
             <main className="App-main">
-                <Button>Learn React</Button>
+                <Button onClick={() => console.log("You clicked me.")}>Learn React</Button>
             </main>
         </div>
     );

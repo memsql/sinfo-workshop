@@ -10,6 +10,7 @@
     transition: 0.15s ease-in-out;
     cursor: pointer;
     user-select: none;
+    position: relative;
 
     font-size: 18px;
     padding: 0.8em 1.2em;
@@ -129,4 +130,24 @@
 }
 .button-component.alt-secondary.inverted:focus {
     box-shadow: 0px 0px 0px 4px #777582;
+}
+
+/* ---------------- */
+/*     LOADING      */
+/* ---------------- */
+.button-component.loading,
+.button-component.loading {
+    animation: loading-primary 1s linear 0s infinite;
+}
+
+@keyframes loading-primary {
+    0% {
+        opacity: 0.8;
+    }
+    30% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 0.8;
+    }
 }
